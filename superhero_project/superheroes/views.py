@@ -22,10 +22,10 @@ def create(request):
     if request.method == "POST":
         name = request.POST.get('name')
         alter_ego = request.POST.get('alter_ego')
-        primary = request.POST.get('primary')
-        secondary = request.POST.get('secondary')
-        catchphrase = request.POST.get('catchphrase')
-        new_hero = Superhero(name=name, alter_ego=alter_ego, primary_ability=primary, secondary_ability=secondary, catch_phrase=catchphrase)
+        primary_ability = request.POST.get('primary_abilty')
+        secondary_ability = request.POST.get('secondary_abilty')
+        catch_phrase = request.POST.get('catch_phrase')
+        new_hero = Superhero(name=name, alter_ego=alter_ego, primary_ability=primary_ability, secondary_ability=secondary_ability, catch_phrase=catch_phrase)
         new_hero.save()
         return HttpResponseRedirect(reverse('superheroes:index'))
 
