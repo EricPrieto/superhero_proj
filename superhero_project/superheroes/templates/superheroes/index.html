@@ -14,9 +14,17 @@
             <h2>{{hero.name}}</h2> 
             <a href="{% url 'superheroes:detail' hero.id%}">Click For Details</a> <br />
             <a href="{% url 'superheroes:edit' hero.id %}">Edit</a>
+            <a href="{% url 'superheroes:delete' hero.id %}">Delete</a>
+            
+          
         </li>
         {% endfor %}
     </ul>
-    <a href="{% url 'superheroes:create' %}">Add New Hero</a>
+    <ul>
+       <li><a href="{% url 'superheroes:create' %}">Add New Hero</a></li> 
+    </ul>
+
+
+    
 </body>
 </html>
