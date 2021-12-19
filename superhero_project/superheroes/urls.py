@@ -1,6 +1,7 @@
 from django.urls import path
-# from django.urls.resolvers import URLPattern
+from django.urls.resolvers import URLPattern
 from . import views
+
 
 
 app_name = 'superheroes'
@@ -11,3 +12,5 @@ urlpatterns =[
     path('<int:hero_id>/edit', views.edit, name='edit'),
     path('<int:hero_id>/delete', views.delete, name='delete'),
 ]
+
+# urlpatterns += staticfiles_urlpatterns()
