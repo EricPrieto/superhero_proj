@@ -8,13 +8,17 @@
     <title>Superhero Details</title>
 </head>
 <body>
-    <h1>List of Heroes</h1>
+    <div class="container-fluid p-4">
+        <div class="container-fluid p-4 bg-primary text-white text-center">
+            <h1>DETAILS</h1>
+            
+        </div>
+    <h1>{{single_hero.name}}</h1>
     <ul>
-        <li>Name: {{single_hero.name}}</li>
-        <li>Alter Ego {{single_hero.alter_ego}}</li>
-        <li>Primary Ability {{single_hero.primary_ability}}</li>
-        <li>Secondary Ability {{single_hero.secondary_ability}}</li>
-        <li>Catch Phrase {{single_hero.catch_phrase}}</li>
+        <li>ALTER EGO: {{single_hero.alter_ego}}</li>
+        <li>PRIMARY ABILITY: {{single_hero.primary_ability}}</li>
+        <li>SECONDARY ABILITY: {{single_hero.secondary_ability}}</li>
+        <li>CATCH PHRASE: {{single_hero.catch_phrase}}</li>
 
     </ul>
 </body>

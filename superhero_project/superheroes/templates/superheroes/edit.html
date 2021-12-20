@@ -8,28 +8,34 @@
     <title>Document</title>
 </head>
 <body>
-    <form action="{% url 'superheroes:edit' single_hero.id %}" method="post"> 
+
+    <div class="container-fluid p-4">
+        <div class="container-fluid p-4 bg-primary text-white text-center">
+            <h1>EDIT: {{single_hero.name}}</h1>
+            
+        </div>
+    <form action="{% url 'superheroes:edit' single_hero.id %}" class="form-horizontal" method="post"> 
         {% csrf_token %} <br />
-        Super Hero:
+        SUPER HERO:
         <input
         type="text"
-        name="name" id="name" value="{{single_hero.name}}" />
-        Alter Ego:
+        name="name" id="name" value="{{single_hero.name}}" /> <br /> <br />
+        ALTER EGO:
         <input
         type="text"
-        name="alter_ego" id="alter_ego" value="{{single_hero.alter_ego}}" />
-        Primary Ability:
+        name="alter_ego" id="alter_ego" value="{{single_hero.alter_ego}}" /> <br /> <br />
+        PRIMARY ABILITY:
         <input
         type="text"
-        name="primary_ability" id="primary_ability" value="{{single_hero.primary_ability}}" />
-        Secondary Ability:
+        name="primary_ability" id="primary_ability" value="{{single_hero.primary_ability}}" /> <br /> <br />
+        SECONDARY ABILITY:
         <input
         type="text"
-        name="secondary_ability" id="secondary_ability" value="{{single_hero.secondary}}" />
-        Catch Phrase:
+        name="secondary_ability" id="secondary_ability" value="{{single_hero.secondary_ability}}" /> <br /> <br />
+        CATCH PHRASE:
         <input
         type="text"
-        name="catch_phrase" id="catch_phrase" value="{{single_hero.catch_phrase}}" />
+        name="catch_phrase" id="catch_phrase" value="{{single_hero.catch_phrase}}" /> <br /> <br />  <br />
         <input type="submit" value="Edit Super Hero" />
 
 

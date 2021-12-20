@@ -8,7 +8,8 @@
     <title>Superhero Index</title>
 </head>
 <body>
-    <div class="container-fluid p-5 bg-primary text-white text-center">
+    <div class="container-fluid p-4">
+    <div class="container-fluid p-4 bg-primary text-white text-center">
         <h1>Welcome to Superhero Creator</h1>
         <p>An App to View Your Favorite Superheroes Or Create Your Own!</p>
         <button type="button" class="btn btn-warning">
@@ -17,19 +18,20 @@
       </div>
 
     {% for hero in all_heroes %}
-    <div class="col-sm-4"><br />
-        <h3>{{hero.name}} </h3>
-        <a href="{% url 'superheroes:detail' hero.id%}">Click For Details</a><br />
-        <a href="{% url 'superheroes:edit' hero.id %}">Edit Superhero</a><br />
-        <a href="{% url 'superheroes:delete' hero.id %}">Delete Superhero</a><br />
-      </div>
+        <div ><br />
+            <h3>{{hero.name}} </h3>
+            <a href="{% url 'superheroes:detail' hero.id%}"> Click For Details</a><br />
+            <a href="{% url 'superheroes:edit' hero.id %}">Edit Superhero</a><br />
+            <a href="{% url 'superheroes:delete' hero.id %}">Delete Superhero</a><br />
+         </div>
 
       {% endfor %}
+    </div>
 
-    <!-- <div class="col-6 pt-5">
+    <div class="col-6 pt-9">
         {% load static %}
         <img src="{% static 'static/venom.jpeg' %}" class="img-fluid img-thumbnail" alt="VENOM">
-    </div> -->
+    </div>
 
     
 </body>

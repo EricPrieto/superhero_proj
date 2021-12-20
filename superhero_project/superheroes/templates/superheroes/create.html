@@ -8,13 +8,19 @@
     <title>Create New Hero</title>
 </head>
 <body>
+
+    <div class="container-fluid p-4">
+        <div class="container-fluid p-4 bg-primary text-white text-center">
+            <h1>CREATE YOUR OWN SUPERHERO {{single_hero.name}}</h1>
+            
+        </div>
     <form action="{% url 'superheroes:create' %}" method="post">
         {% csrf_token %} <br />
-        Name: <input type="text" name="name" id="name"><br />
-        Alter: <input type="text" name="alter_ego" id="alter_ego"><br />
-        Primary Ability: <input type="text" name="primary" id="primary"><br />
-        Secondary Ability: <input type="text" name="secondary" id="secondary"><br />
-        Catchphrase: <input type="text" name="catch_phrase" id="catch_phrase'" ><br />
+        NAME: <input type="text" name="name" id="name"><br /> <br />
+        ALTER EGO: <input type="text" name="alter_ego" id="alter_ego"><br /> <br />
+        PRIMARY ABILITY <input type="text" name="primary" id="primary"><br /> <br />
+        SECONDARY ABILITY: <input type="text" name="secondary" id="secondary"><br /> <br />
+        CATCHPHRASE: <input type="text" name="catch_phrase" id="catch_phrase'" ><br /> <br />
         <input type="submit" value="Add!">
     </form>
     
